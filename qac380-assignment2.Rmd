@@ -17,13 +17,6 @@ Species and Sex
 ```{r}
 table(penguins$species, penguins$sex, useNA = "ifany")
 ```
-
-
-
-
-
-
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
