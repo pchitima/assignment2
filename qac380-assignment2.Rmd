@@ -3,22 +3,23 @@ title: "QAC380-assignment2"
 output: html_document
 date: "2026-10-21"
 ---
-Load the dataset
+## Load the dataset
 ```{r}
 penguins <- read.csv("penguins.csv")
 
 ```
 
-Descriptive Statistics
+## Descriptive Statistics
 ```{r}
 summary(penguins[, c("bill_length_mm", "bill_depth_mm","flipper_length_mm", "body_mass_g")])
 ```
-Species and Sex
+## Species and Sex
 ```{r}
 table(penguins$species, penguins$sex, useNA = "ifany")
 ```
 
-Run a linear regression: Does flipper length predict body mass?
+
+## Run a linear regression: Does flipper length predict body mass?
 ```{r}
 model1 <- lm(body_mass_g ~ flipper_length_mm, data = penguins)
 summary(model1)
