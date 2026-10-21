@@ -29,3 +29,20 @@ summary(model1)
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+```{r}
+## Jane Rak - Branch 
+
+penguins <- read.csv("penguins.csv")
+
+# Basic descriptive analyses
+summary(penguins)
+
+mean(penguins$bill_depth_mm, na.rm = TRUE)
+
+hist(penguins$body_mass_g)
+
+hist(penguins$bill_length_mm)
+
+
+```
