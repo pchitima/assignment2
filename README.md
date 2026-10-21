@@ -34,3 +34,7 @@ The output is saved to `qac380-assignment2.html`.
 
 The script will read `penguins.csv` and regenerate `qac380-assignment2 `
 with the same results.
+
+##Run a linear regression: Does flipper length predict body mass?
+model1 <- lm(body_mass_g ~ flipper_length_mm, data = penguins)
+summary(model1)

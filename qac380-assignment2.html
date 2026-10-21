@@ -374,6 +374,28 @@ display: none;
 ##   Adelie        73   73    6
 ##   Chinstrap     34   34    0
 ##   Gentoo        58   61    5</code></pre>
+<p>Run a linear regression: Does flipper length predict body mass?</p>
+<pre class="r"><code>model1 &lt;- lm(body_mass_g ~ flipper_length_mm, data = penguins)
+summary(model1)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = body_mass_g ~ flipper_length_mm, data = penguins)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1058.80  -259.27   -26.88   247.33  1288.69 
+## 
+## Coefficients:
+##                    Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)       -5780.831    305.815  -18.90   &lt;2e-16 ***
+## flipper_length_mm    49.686      1.518   32.72   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 394.3 on 340 degrees of freedom
+##   (2 observations deleted due to missingness)
+## Multiple R-squared:  0.759,  Adjusted R-squared:  0.7583 
+## F-statistic:  1071 on 1 and 340 DF,  p-value: &lt; 2.2e-16</code></pre>
 
 
 

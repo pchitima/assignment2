@@ -17,6 +17,14 @@ Species and Sex
 ```{r}
 table(penguins$species, penguins$sex, useNA = "ifany")
 ```
+
+Run a linear regression: Does flipper length predict body mass?
+```{r}
+model1 <- lm(body_mass_g ~ flipper_length_mm, data = penguins)
+summary(model1)
+```
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
