@@ -355,9 +355,12 @@ display: none;
 </div>
 
 
-<p>Load the dataset</p>
+<div id="load-the-dataset" class="section level2">
+<h2>Load the dataset</h2>
 <pre class="r"><code>penguins &lt;- read.csv(&quot;penguins.csv&quot;)</code></pre>
-<p>Descriptive Statistics</p>
+</div>
+<div id="descriptive-statistics" class="section level2">
+<h2>Descriptive Statistics</h2>
 <pre class="r"><code>summary(penguins[, c(&quot;bill_length_mm&quot;, &quot;bill_depth_mm&quot;,&quot;flipper_length_mm&quot;, &quot;body_mass_g&quot;)])</code></pre>
 <pre><code>##  bill_length_mm  bill_depth_mm   flipper_length_mm  body_mass_g  
 ##  Min.   :32.10   Min.   :13.10   Min.   :172.0     Min.   :2700  
@@ -367,14 +370,18 @@ display: none;
 ##  3rd Qu.:48.50   3rd Qu.:18.70   3rd Qu.:213.0     3rd Qu.:4750  
 ##  Max.   :59.60   Max.   :21.50   Max.   :231.0     Max.   :6300  
 ##  NA&#39;s   :2       NA&#39;s   :2       NA&#39;s   :2         NA&#39;s   :2</code></pre>
-<p>Species and Sex</p>
+</div>
+<div id="species-and-sex" class="section level2">
+<h2>Species and Sex</h2>
 <pre class="r"><code>table(penguins$species, penguins$sex, useNA = &quot;ifany&quot;)</code></pre>
 <pre><code>##            
 ##             female male &lt;NA&gt;
 ##   Adelie        73   73    6
 ##   Chinstrap     34   34    0
 ##   Gentoo        58   61    5</code></pre>
-<p>Run a linear regression: Does flipper length predict body mass?</p>
+</div>
+<div id="run-a-linear-regression-does-flipper-length-predict-body-mass" class="section level2">
+<h2>Run a linear regression: Does flipper length predict body mass?</h2>
 <pre class="r"><code>model1 &lt;- lm(body_mass_g ~ flipper_length_mm, data = penguins)
 summary(model1)</code></pre>
 <pre><code>## 
@@ -396,6 +403,7 @@ summary(model1)</code></pre>
 ##   (2 observations deleted due to missingness)
 ## Multiple R-squared:  0.759,  Adjusted R-squared:  0.7583 
 ## F-statistic:  1071 on 1 and 340 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
 
 
 
