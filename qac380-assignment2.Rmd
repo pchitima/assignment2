@@ -3,6 +3,21 @@ title: "QAC380-assignment2"
 output: html_document
 date: "2026-10-21"
 ---
+Load the dataset
+```{r}
+penguins <- read.csv("penguins.csv")
+
+```
+
+Descriptive Statistics
+```{r}
+summary(penguins[, c("bill_length_mm", "bill_depth_mm","flipper_length_mm", "body_mass_g")])
+```
+Species and Sex
+```{r}
+table(penguins$species, penguins$sex, useNA = "ifany")
+```
+
 
 
 
