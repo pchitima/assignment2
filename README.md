@@ -22,7 +22,6 @@ This R Markdown script loads `penguins.csv` and runs descriptive analyses:
 1. Summary statistics (min, quartiles, median, mean, max) for the numeric
    measurements: bill length, bill depth, flipper length, and body mass.
 2. Mean measurements grouped by species, to compare the three species.
-3. A linear regression testing if flipper length predicts body mass.
 
 The output is saved to `qac380-assignment2.html`.
 
@@ -36,6 +35,4 @@ The output is saved to `qac380-assignment2.html`.
 The script will read `penguins.csv` and regenerate `qac380-assignment2 `
 with the same results.
 
-##Run a linear regression: Does flipper length predict body mass?
-model1 <- lm(body_mass_g ~ flipper_length_mm, data = penguins)
-summary(model1)
+
